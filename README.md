@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Instrucciones para ejecutar la aplicación
 
+Para ver la aplicación puede ingresar al link https://client-table.netlify.app/clientList
+
 En esta aplicación se podrá:
 
 * Crear nuevos usuarios en el botón "Nuevo", identificado en la parte izquierda en color verde
