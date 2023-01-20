@@ -10,9 +10,9 @@ En esta aplicación se podrá:
 
 * Ver los usuarios existentes en la base de datos en una tabla
 
-*Editar la información de los usuarios en el botón "Editar", identificado a la derecha de la tabla en color  azul
+* Editar la información de los usuarios en el botón "Editar", identificado a la derecha de la tabla en color  azul
 
-*Eliminar Usuarios en el botón "Eliminar", identificado a la derecha de la tabla en color rojo
+* Eliminar Usuarios en el botón "Eliminar", identificado a la derecha de la tabla en color rojo
 
 
 ## Development server
