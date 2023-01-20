@@ -2,6 +2,19 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
+## Instrucciones para ejecutar la aplicación
+
+En esta aplicación se podrá:
+
+* Crear nuevos usuarios en el botón "Nuevo", identificado en la parte izquierda en color verde
+
+* Ver los usuarios existentes en la base de datos en una tabla
+
+*Editar la información de los usuarios en el botón "Editar", identificado a la derecha de la tabla en color  azul
+
+*Eliminar Usuarios en el botón "Eliminar", identificado a la derecha de la tabla en color rojo
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
