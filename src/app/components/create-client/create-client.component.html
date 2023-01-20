@@ -1,0 +1,37 @@
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <div class="d-flex flex-row mb-4  justify-content-between">
+                        <span class="h3">Ficha del cliente</span>
+                        <div class="spinner-border" role="status" *ngIf="loading">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </div>
+                    <form (ngSubmit)="saveEditionClient()">
+                        <div class="mb-2 d-flex flex-row">
+                            <label for="clientName" class="col-form-label me-3">Nombre:</label>
+                            <input #name type="text" class="form-control" id="clientName">
+                        </div>
+                        <div class="mb-2 d-flex flex-row">
+                            <label for="clientAddress" class="col-form-label  me-2">Dirección:</label>
+                            <input #address type="text" class="form-control" id="clientAddress">
+                        </div>
+                        <div class="mb-2 d-flex flex-row">
+                            <label for="clientPostalCode" class="col-form-label  me-3">C.Postal: </label>
+                            <input #postalCode type="text" class="form-control" id="clientPostalCode">
+                        </div>
+                        <div class="mb-2 d-flex flex-row">
+                            <label for="clientPoblation" class="col-form-label  me-2">Población:</label>
+                            <input #poblation type="text" class="form-control" id="clientPoblation">
+                        </div>
+                        <p #messageError class="message-error"></p>
+                        <button type="button" class="btn btn-secondary me-2" routerLink="/clientList">Cancelar</button>
+                        <button type="button" class="btn btn-primary" (click)="saveEditionClient()">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

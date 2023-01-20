@@ -1,0 +1,61 @@
+<div class="container pt-5">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex flex-column mb-4">
+                <span class="h3">Tabla de clientes</span>
+            </div>
+            <button type="button" class="btn btn-success me-2" routerLink="/createClient"><i class="bi bi-plus-circle-fill"></i> Nuevo</button>
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Cod.Postal</th>
+                        <th>Población</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let client of allClients">
+                    <tr>
+                        <td class="client-id">{{client.id}}</td>
+                        <td>{{client.name}}</td>
+                        <td>{{client.address}}</td>
+                        <td>{{client.postalCode}}</td>
+                        <td>{{client.poblation}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary me-2" [routerLink]="['/editClient/', client.id]"><i class="bi bi-pencil-square"></i></button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger me-2" data-bs-toggle="modal"
+                                data-bs-target="#modalDelete"><i class="bi bi-trash"></i></button>
+                        </td>
+                    </tr>
+                    <!-- Modal para eliminar un cliente -->
+                    <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar cliente</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Está seguro que desea eliminar este cliente?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn  btn-danger" (click)="deleteClient(client.id)" data-bs-dismiss="modal"
+                                        >Eliminar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
